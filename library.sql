@@ -1,0 +1,54 @@
+CREATE TABLE BOOKS (
+	ID INT  NOT NULL,
+	NAME VARCHAR(50) NOT NULL,
+	PRICE INT,
+	CATEGORYID INT,
+	AUTHORID INT,
+	PRIMARY KEY (ID, NAME)
+);
+
+CREATE TABLE CATEGORIES (
+    ID INT PRIMARY KEY,
+    NAME VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE AUTHORS (
+    ID INT PRIMARY KEY,
+    NAME VARCHAR(50) NOT NULL
+);
+
+INSERT INTO CATEGORIES 
+
+VALUES	(1, 'Cat-A'),
+VALUES	(2, 'Cat-B'),
+VALUES	(3, 'Cat-C'),
+VALUES	(7, 'Cat-D'),
+VALUES	(8, 'Cat-E'),
+VALUES	(4, 'Cat-F'),
+VALUES	(10, 'Cat-G'),
+VALUES	(12, 'Cat-H'),
+VALUES	(6, 'Cat-I');
+
+INSERT INTO	AUTHORS
+
+VALUES	(1, 'Author-A'),
+VALUES	(2, 'Author-B'),
+VALUES	(3, 'Author-C'),
+VALUES	(10, 'Author-D'),
+VALUES	(12, 'Author-E');
+
+INSERT INTO BOOKS
+	
+
+VALUES	('Book-A', 100, 1, 2),
+VALUES	('Book-B', 200, 2, 2),
+VALUES	('Book-C', 150, 3, 2),
+VALUES	('Book-D', 100, 3, 1),
+VALUES	('Book-E', 200, 3, 1),
+VALUES	('Book-F', 150, 4, 1),
+VALUES	('Book-G', 100, 5, 5),
+VALUES	('Book-H', 200, 5, 6),
+VALUES	('Book-I', 150, 7, 8);
+
+
+DELIMITER $$	
